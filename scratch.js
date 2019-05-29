@@ -1,3 +1,7 @@
+//https://acrobatusers.com/tutorials/auto_redaction_with_javascript
+//https://acrobatusers.com/tutorials/auto_placement_annotations
+//https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/Acro6JS.pdf
+
 var p=13;
 
 {
