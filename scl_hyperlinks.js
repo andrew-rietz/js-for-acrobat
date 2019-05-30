@@ -4,8 +4,14 @@ In acrobat, coordinates are given in points. There are 72 points per inch, and p
 
 */
 
-//for (var p = 0; p < this.numPages; p++)
-var p=13;
+
+for ( var p = 0; p < this.numPages; p++){
+  var b = this.getPageBox("Crop", p);
+  this.removeLinks(p, b);
+}
+
+for (var p = 0; p < this.numPages; p++)
+// var p=13;
 
   {
 

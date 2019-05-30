@@ -1,6 +1,22 @@
-//https://acrobatusers.com/tutorials/auto_redaction_with_javascript
-//https://acrobatusers.com/tutorials/auto_placement_annotations
-//https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/Acro6JS.pdf
+
+
+
+
+Function that takes in page number, quad coordinates, and destination page
+
+function create_link(link_from_page, coordinates, link_to_page){
+  var linkRect1 = [coordinates[0],coordinates[1],coordinates[2],coordinates[3]];
+  var lhLink = this.addLink(link_from_page, linkRect1);
+  var destPage = (0);
+
+  lhLink.setAction( "this.pageNum = " + link_to_page);
+  lhLink.borderColor = color.red;
+}
+
+for(var i=0; i<(scl_links.length); i++)
+{
+  create_link(scl_links[1], scl_links[2], scl_links[3])
+}
 
 var scl_links =
 [
@@ -96,18 +112,8 @@ var scl_links =
   ["BACK TO REPORT", 130, [323.26,255.49,443.58,233.29], 1],
 ]
 
-function create_link(link_from_page, coordinates, link_to_page){
-  this.pageNum = link_from_page-1;
-  var linkRect1 = [coordinates[0],coordinates[1],coordinates[2],coordinates[3]];
-  var lhLink = this.addLink(link_from_page-1, linkRect1);
-  var destPage = (0);
-
-  lhLink.setAction( "this.pageNum = " + link_to_page);
-  lhLink.borderColor = color.red;
-  lhLink.borderWidth = 1;
-}
-
-for(var i=0; i<(scl_links.length); i++)
-{
-  create_link(scl_links[i][1], scl_links[i][2], scl_links[i][3])
-}
+var pse_links = [
+  [link_from_page, [coordinates], link_to_page],
+  [link_from_page, [coordinates], link_to_page],
+  [link_from_page, [coordinates], link_to_page],
+]
