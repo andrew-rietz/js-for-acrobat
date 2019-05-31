@@ -103,8 +103,6 @@ function create_link(link_from_page, coordinates, link_to_page){
   var destPage = (0);
 
   lhLink.setAction( "this.pageNum = " + (link_to_page-1));
-  lhLink.borderColor = color.red;
-  lhLink.borderWidth = 1;
 }
 
 for(var i=0; i<(scl_links.length); i++)
@@ -205,8 +203,6 @@ function create_link(link_from_page, coordinates, link_to_page){
   var destPage = (0);
 
   lhLink.setAction( "this.pageNum = " + (link_to_page-1));
-  lhLink.borderColor = color.red;
-  lhLink.borderWidth = 1;
 }
 
 for(var i=0; i<(pse_links.length); i++)
