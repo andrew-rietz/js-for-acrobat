@@ -1,1 +1,1 @@
-A set of JavaScript tools to automate report production for NEEA RBSA and NYSERDA RBSA 
+A set of JavaScript files to automate report production for NEEA RBSA and NYSERDA RBSA 
